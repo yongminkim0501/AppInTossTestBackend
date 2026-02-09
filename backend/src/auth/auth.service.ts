@@ -1,14 +1,13 @@
 import { Injectable } from '@nestjs/common';
 import {HttpService} from '@nestjs/axios';
 import {firstValueFrom} from 'rxjs';
-/*
+
 @Injectable()
 export class UserRepository{
   constrcutor(
     // 여기에다가 DB 의존성 주입해야 함
   ){}
 }
-*/
 
 @Injectable()
 export class UserService{
