@@ -1,11 +1,10 @@
 import { Controller, Get } from '@nestjs/common';
-import { AuthService } from './app.service';
+import { AppService } from './app.service';
 
-@Controller("auth")
-export class AuthController{
-  constructor(private readonly authService: AuthService){}
+@Controller("app")
+export class AppController{
+  constructor(private readonly authService: AppService){}
   @Get("token") // 주소 : http://localhost:3000/auth/token
   async getUserToken(): Promise<any> {
-    return await this.authService.getTossAccessToken()
   }
 }
